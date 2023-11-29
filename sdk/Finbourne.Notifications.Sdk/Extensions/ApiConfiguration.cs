@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace Finbourne.Notifications.Sdk.Extensions
 {
@@ -42,6 +43,7 @@ namespace Finbourne.Notifications.Sdk.Extensions
         /// <summary>
         /// Finbourne-notifications Api Url
         /// </summary>
+        [ConfigurationKeyName("finbourne-notificationsUrl")]
         public string BaseUrl { get; set; }
 
         /// <summary>
