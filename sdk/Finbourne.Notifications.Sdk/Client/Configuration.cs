@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Net.Http;
+using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 
 namespace Finbourne.Notifications.Sdk.Client
@@ -543,7 +544,7 @@ namespace Finbourne.Notifications.Sdk.Client
             string report = "C# SDK (Finbourne.Notifications.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 0.1.923\n";
+            report += "    Version of the API: 0.1.929\n";
             report += "    SDK Package Version: 2.0.0\n";
 
             return report;

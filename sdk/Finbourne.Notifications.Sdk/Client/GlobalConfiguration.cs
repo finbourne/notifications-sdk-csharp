@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Finbourne.Notifications.Sdk.Extensions;
 
 namespace Finbourne.Notifications.Sdk.Client
 {
