@@ -29,39 +29,24 @@ namespace Finbourne.Notifications.Sdk.Model
     public partial class SmsNotificationTypeResponse : IEquatable<SmsNotificationTypeResponse>, IValidatableObject
     {
         /// <summary>
-        /// The type of delivery mechanism for this notification
+        /// Initializes a new instance of the <see cref="SmsNotificationTypeResponse" /> class.
         /// </summary>
-        /// <value>The type of delivery mechanism for this notification</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum TypeEnum
+        /// <param name="type">The type of delivery mechanism for this notification.</param>
+        /// <param name="body">The body of the SMS.</param>
+        /// <param name="recipients">The phone numbers to which the SMS will be sent to (E.164 format).</param>
+        public SmsNotificationTypeResponse(string type = default(string), string body = default(string), List<string> recipients = default(List<string>))
         {
-            /// <summary>
-            /// Enum Sms for value: Sms
-            /// </summary>
-            [EnumMember(Value = "Sms")]
-            Sms = 1
-
+            this.Type = type;
+            this.Body = body;
+            this.Recipients = recipients;
         }
-
 
         /// <summary>
         /// The type of delivery mechanism for this notification
         /// </summary>
         /// <value>The type of delivery mechanism for this notification</value>
         [DataMember(Name = "type", EmitDefaultValue = true)]
-        public TypeEnum? Type { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SmsNotificationTypeResponse" /> class.
-        /// </summary>
-        /// <param name="type">The type of delivery mechanism for this notification.</param>
-        /// <param name="body">The body of the SMS.</param>
-        /// <param name="recipients">The phone numbers to which the SMS will be sent to (E.164 format).</param>
-        public SmsNotificationTypeResponse(TypeEnum? type = default(TypeEnum?), string body = default(string), List<string> recipients = default(List<string>))
-        {
-            this.Type = type;
-            this.Body = body;
-            this.Recipients = recipients;
-        }
+        public string Type { get; set; }
 
         /// <summary>
         /// The body of the SMS
@@ -125,7 +110,8 @@ namespace Finbourne.Notifications.Sdk.Model
             return 
                 (
                     this.Type == input.Type ||
-                    this.Type.Equals(input.Type)
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 ) && 
                 (
                     this.Body == input.Body ||
@@ -149,7 +135,10 @@ namespace Finbourne.Notifications.Sdk.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                if (this.Type != null)
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 if (this.Body != null)
                 {
                     hashCode = (hashCode * 59) + this.Body.GetHashCode();
