@@ -1,6 +1,6 @@
 # Finbourne.Notifications.Sdk.Api.DeliveriesApi
 
-All URIs are relative to *https://fbn-prd.lusid.com/notification*
+All URIs are relative to *http://localhost.lusid.com:8310*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -29,7 +29,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://fbn-prd.lusid.com/notification";
+            config.BasePath = "http://localhost.lusid.com:8310";
             // Configure OAuth2 access token for authorization: oauth2
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 

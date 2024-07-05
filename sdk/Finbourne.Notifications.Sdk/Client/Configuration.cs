@@ -114,7 +114,7 @@ namespace Finbourne.Notifications.Sdk.Client
         {
             Proxy = null;
             UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/2.0.0/csharp");
-            BasePath = "https://fbn-prd.lusid.com/notification";
+            BasePath = "http://localhost.lusid.com:8310";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -122,7 +122,7 @@ namespace Finbourne.Notifications.Sdk.Client
             {
                 {
                     new Dictionary<string, object> {
-                        {"url", "https://fbn-prd.lusid.com/notification"},
+                        {"url", "http://localhost.lusid.com:8310"},
                         {"description", "No description provided"},
                     }
                 }
@@ -143,7 +143,7 @@ namespace Finbourne.Notifications.Sdk.Client
             IDictionary<string, string> defaultHeaders,
             IDictionary<string, string> apiKey,
             IDictionary<string, string> apiKeyPrefix,
-            string basePath = "https://fbn-prd.lusid.com/notification") : this()
+            string basePath = "http://localhost.lusid.com:8310") : this()
         {
             if (string.IsNullOrWhiteSpace(basePath))
                 throw new ArgumentException("The provided basePath is invalid.", "basePath");
@@ -544,7 +544,7 @@ namespace Finbourne.Notifications.Sdk.Client
             string report = "C# SDK (Finbourne.Notifications.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 0.1.971\n";
+            report += "    Version of the API: 1.0.0\n";
             report += "    SDK Package Version: 2.0.0\n";
 
             return report;
