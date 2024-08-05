@@ -65,7 +65,7 @@ namespace Finbourne.Notifications.Sdk.Extensions
                 if (string.IsNullOrWhiteSpace(apiConfiguration.BaseUrl))
                     throw new ArgumentNullException(
                         nameof(apiConfiguration.BaseUrl),
-                        $"BaseUrl Uri missing. Please specify either FBN_FINBOURNE-NOTIFICATIONS_API_URL environment variable or finbourne-notificationsUrl in secrets.json.");
+                        $"BaseUrl Uri missing. Please specify either FBN_NOTIFICATIONS_URL environment variable or notificationsUrl in secrets.json.");
 
                 throw new UriFormatException($"Invalid Uri: {apiConfiguration.BaseUrl}");
             }

@@ -9,5 +9,5 @@ Name | Type | Description | Notes
 **Description** | **string** | The summary of the services provided by the notification | [optional] 
 **NotificationType** | [**NotificationType**](NotificationType.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
 

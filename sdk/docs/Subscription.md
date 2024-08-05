@@ -17,5 +17,5 @@ Name | Type | Description | Notes
 **UseAsAuth** | **string** | The user to use as auth for the subscription | 
 **Href** | **string** | A URI for retrieving this subscription | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
 
