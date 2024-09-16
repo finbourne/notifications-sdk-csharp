@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Notifications.Sdk.Client;
+using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 using Finbourne.Notifications.Sdk.Model;
 
@@ -41,8 +42,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="limit">The maximum number of delivery attempts to retrieve. Defaults to 200 if not specified. (optional)</param>
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfDelivery</returns>
-        ResourceListOfDelivery ListDeliveries(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ResourceListOfDelivery ListDeliveries(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListDeliveries: List Deliveries
@@ -55,8 +57,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="limit">The maximum number of delivery attempts to retrieve. Defaults to 200 if not specified. (optional)</param>
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfDelivery</returns>
-        ApiResponse<ResourceListOfDelivery> ListDeliveriesWithHttpInfo(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListOfDelivery> ListDeliveriesWithHttpInfo(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -78,8 +81,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfDelivery</returns>
-        System.Threading.Tasks.Task<ResourceListOfDelivery> ListDeliveriesAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfDelivery> ListDeliveriesAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListDeliveries: List Deliveries
@@ -93,8 +97,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfDelivery)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfDelivery>> ListDeliveriesWithHttpInfoAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfDelivery>> ListDeliveriesWithHttpInfoAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -127,9 +132,15 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns></returns>
         public DeliveriesApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Notifications.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Notifications.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Notifications.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -220,10 +231,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="limit">The maximum number of delivery attempts to retrieve. Defaults to 200 if not specified. (optional)</param>
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfDelivery</returns>
-        public ResourceListOfDelivery ListDeliveries(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public ResourceListOfDelivery ListDeliveries(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> localVarResponse = ListDeliveriesWithHttpInfo(page, limit, filter);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> localVarResponse = ListDeliveriesWithHttpInfo(page, limit, filter, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -235,10 +247,21 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="limit">The maximum number of delivery attempts to retrieve. Defaults to 200 if not specified. (optional)</param>
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfDelivery</returns>
-        public Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> ListDeliveriesWithHttpInfo(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> ListDeliveriesWithHttpInfo(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -316,10 +339,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfDelivery</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfDelivery> ListDeliveriesAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfDelivery> ListDeliveriesAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> localVarResponse = await ListDeliveriesWithHttpInfoAsync(page, limit, filter, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery> localVarResponse = await ListDeliveriesWithHttpInfoAsync(page, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -332,11 +356,22 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="filter">Expression to filter the result set. For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.  By default, we set this filter to only query for the last week&#39;s worth of Deliveries, however if a filter is explicitly set, this will be overriden.  An example filter to override the attempt time date might be &#39;AttemptTime gt 2023-08-25&#39; for example (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfDelivery)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery>> ListDeliveriesWithHttpInfoAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfDelivery>> ListDeliveriesWithHttpInfoAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

@@ -46,6 +46,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<NotificationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<NotificationsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
@@ -53,6 +61,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Notification result = apiInstance.CreateNotification(scope, code, createNotificationRequest, opts: opts);
+
                 // [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
                 Notification result = apiInstance.CreateNotification(scope, code, createNotificationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -151,6 +162,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<NotificationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<NotificationsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
@@ -158,6 +177,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteNotification(scope, code, id, opts: opts);
+
                 // [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
                 apiInstance.DeleteNotification(scope, code, id);
             }
@@ -253,6 +275,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<NotificationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<NotificationsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
@@ -260,6 +290,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Notification result = apiInstance.GetNotification(scope, code, id, opts: opts);
+
                 // [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
                 Notification result = apiInstance.GetNotification(scope, code, id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -359,12 +392,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<NotificationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<NotificationsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfNotification result = apiInstance.ListNotifications(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
                 ResourceListOfNotification result = apiInstance.ListNotifications(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -463,6 +507,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<NotificationsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<NotificationsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
@@ -471,6 +523,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Notification result = apiInstance.UpdateNotification(scope, code, id, updateNotificationRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
                 Notification result = apiInstance.UpdateNotification(scope, code, id, updateNotificationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

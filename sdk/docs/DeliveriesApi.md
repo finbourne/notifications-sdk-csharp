@@ -44,6 +44,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<DeliveriesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<DeliveriesApi>();
             var page = "page_example";  // string? | The pagination token to use to continue listing delivery attempts. This value is returned from the previous call. When this field is supplied the filter field should not be supplied. (optional) 
             var limit = 56;  // int? | The maximum number of delivery attempts to retrieve. Defaults to 200 if not specified. (optional) 
@@ -51,6 +59,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfDelivery result = apiInstance.ListDeliveries(page, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] ListDeliveries: List Deliveries
                 ResourceListOfDelivery result = apiInstance.ListDeliveries(page, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Notifications.Sdk.Client;
+using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 using Finbourne.Notifications.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>EventTypeSchema</returns>
-        EventTypeSchema GetEventType(string eventType, int operationIndex = 0);
+        EventTypeSchema GetEventType(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
@@ -48,15 +50,17 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of EventTypeSchema</returns>
-        ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0);
+        ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfEventTypeSchema</returns>
-        ResourceListOfEventTypeSchema ListEventTypes(int operationIndex = 0);
+        ResourceListOfEventTypeSchema ListEventTypes(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
@@ -66,8 +70,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// </remarks>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfEventTypeSchema</returns>
-        ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0);
+        ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -87,8 +92,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of EventTypeSchema</returns>
-        System.Threading.Tasks.Task<EventTypeSchema> GetEventTypeAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EventTypeSchema> GetEventTypeAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
@@ -100,8 +106,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (EventTypeSchema)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
         /// </summary>
@@ -111,8 +118,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfEventTypeSchema</returns>
-        System.Threading.Tasks.Task<ResourceListOfEventTypeSchema> ListEventTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfEventTypeSchema> ListEventTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
@@ -123,8 +131,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfEventTypeSchema)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -157,9 +166,15 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns></returns>
         public EventTypesApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Notifications.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Notifications.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Notifications.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -248,10 +263,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>EventTypeSchema</returns>
-        public EventTypeSchema GetEventType(string eventType, int operationIndex = 0)
+        public EventTypeSchema GetEventType(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> localVarResponse = GetEventTypeWithHttpInfo(eventType);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> localVarResponse = GetEventTypeWithHttpInfo(eventType, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -261,8 +277,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of EventTypeSchema</returns>
-        public Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0)
+        public Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'eventType' is set
             if (eventType == null)
@@ -271,6 +288,16 @@ namespace Finbourne.Notifications.Sdk.Api
             }
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -335,10 +362,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of EventTypeSchema</returns>
-        public async System.Threading.Tasks.Task<EventTypeSchema> GetEventTypeAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EventTypeSchema> GetEventTypeAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> localVarResponse = await GetEventTypeWithHttpInfoAsync(eventType, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> localVarResponse = await GetEventTypeWithHttpInfoAsync(eventType, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -349,8 +377,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="eventType">The event type to retrieve schema for.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (EventTypeSchema)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'eventType' is set
             if (eventType == null)
@@ -360,6 +389,16 @@ namespace Finbourne.Notifications.Sdk.Api
 
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -423,10 +462,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfEventTypeSchema</returns>
-        public ResourceListOfEventTypeSchema ListEventTypes(int operationIndex = 0)
+        public ResourceListOfEventTypeSchema ListEventTypes(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> localVarResponse = ListEventTypesWithHttpInfo();
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> localVarResponse = ListEventTypesWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -435,10 +475,21 @@ namespace Finbourne.Notifications.Sdk.Api
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfEventTypeSchema</returns>
-        public Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0)
+        public Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -501,10 +552,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfEventTypeSchema</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfEventTypeSchema> ListEventTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfEventTypeSchema> ListEventTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> localVarResponse = await ListEventTypesWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> localVarResponse = await ListEventTypesWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -514,11 +566,22 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfEventTypeSchema)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };

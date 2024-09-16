@@ -43,11 +43,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<EventTypesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<EventTypesApi>();
             var eventType = "eventType_example";  // string | The event type to retrieve schema for.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // EventTypeSchema result = apiInstance.GetEventType(eventType, opts: opts);
+
                 // [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
                 EventTypeSchema result = apiInstance.GetEventType(eventType);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -145,10 +156,21 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<EventTypesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<EventTypesApi>();
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfEventTypeSchema result = apiInstance.ListEventTypes(opts: opts);
+
                 // [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
                 ResourceListOfEventTypeSchema result = apiInstance.ListEventTypes();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

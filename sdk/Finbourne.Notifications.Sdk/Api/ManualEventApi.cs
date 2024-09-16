@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Notifications.Sdk.Client;
+using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 using Finbourne.Notifications.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ManualEvent</returns>
-        ManualEvent TriggerManualEvent(ManualEventRequest manualEventRequest, int operationIndex = 0);
+        ManualEvent TriggerManualEvent(ManualEventRequest manualEventRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
@@ -48,8 +50,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ManualEvent</returns>
-        ApiResponse<ManualEvent> TriggerManualEventWithHttpInfo(ManualEventRequest manualEventRequest, int operationIndex = 0);
+        ApiResponse<ManualEvent> TriggerManualEventWithHttpInfo(ManualEventRequest manualEventRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -69,8 +72,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ManualEvent</returns>
-        System.Threading.Tasks.Task<ManualEvent> TriggerManualEventAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ManualEvent> TriggerManualEventAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
@@ -82,8 +86,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ManualEvent)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManualEvent>> TriggerManualEventWithHttpInfoAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ManualEvent>> TriggerManualEventWithHttpInfoAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -116,9 +121,15 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns></returns>
         public ManualEventApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Notifications.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Notifications.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Notifications.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Notifications.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Notifications.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -207,10 +218,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ManualEvent</returns>
-        public ManualEvent TriggerManualEvent(ManualEventRequest manualEventRequest, int operationIndex = 0)
+        public ManualEvent TriggerManualEvent(ManualEventRequest manualEventRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> localVarResponse = TriggerManualEventWithHttpInfo(manualEventRequest);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> localVarResponse = TriggerManualEventWithHttpInfo(manualEventRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -220,8 +232,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ManualEvent</returns>
-        public Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> TriggerManualEventWithHttpInfo(ManualEventRequest manualEventRequest, int operationIndex = 0)
+        public Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> TriggerManualEventWithHttpInfo(ManualEventRequest manualEventRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'manualEventRequest' is set
             if (manualEventRequest == null)
@@ -230,6 +243,16 @@ namespace Finbourne.Notifications.Sdk.Api
             }
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -298,10 +321,11 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ManualEvent</returns>
-        public async System.Threading.Tasks.Task<ManualEvent> TriggerManualEventAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ManualEvent> TriggerManualEventAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> localVarResponse = await TriggerManualEventWithHttpInfoAsync(manualEventRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent> localVarResponse = await TriggerManualEventWithHttpInfoAsync(manualEventRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -312,8 +336,9 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ManualEvent)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent>> TriggerManualEventWithHttpInfoAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ManualEvent>> TriggerManualEventWithHttpInfoAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'manualEventRequest' is set
             if (manualEventRequest == null)
@@ -323,6 +348,16 @@ namespace Finbourne.Notifications.Sdk.Api
 
 
             Finbourne.Notifications.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Notifications.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 

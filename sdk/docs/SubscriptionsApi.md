@@ -46,11 +46,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SubscriptionsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SubscriptionsApi>();
             var createSubscription = new CreateSubscription(); // CreateSubscription | The data to create a subscription
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Subscription result = apiInstance.CreateSubscription(createSubscription, opts: opts);
+
                 // [EXPERIMENTAL] CreateSubscription: Create a new subscription.
                 Subscription result = apiInstance.CreateSubscription(createSubscription);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -147,12 +158,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SubscriptionsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SubscriptionsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteSubscription(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] DeleteSubscription: Delete a subscription.
                 apiInstance.DeleteSubscription(scope, code);
             }
@@ -247,12 +269,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SubscriptionsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SubscriptionsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Subscription result = apiInstance.GetSubscription(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] GetSubscription: Get a subscription.
                 Subscription result = apiInstance.GetSubscription(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -351,6 +384,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SubscriptionsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SubscriptionsApi>();
             var filter = "filter_example";  // string? | Expression to filter the result set. Read more about <a href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</a>. (optional) 
             var sortBy = "sortBy_example";  // string? | Fields to order the result set. Read more about <a href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</a> (optional) 
@@ -359,6 +400,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfSubscription result = apiInstance.ListSubscriptions(filter, sortBy, page, limit, opts: opts);
+
                 // [EXPERIMENTAL] ListSubscriptions: List subscriptions.
                 ResourceListOfSubscription result = apiInstance.ListSubscriptions(filter, sortBy, page, limit);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -458,6 +502,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SubscriptionsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SubscriptionsApi>();
             var scope = "scope_example";  // string | The scope that identifies a subscription
             var code = "code_example";  // string | The code that identifies a subscription
@@ -465,6 +517,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Subscription result = apiInstance.UpdateSubscription(scope, code, updateSubscription, opts: opts);
+
                 // [EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
                 Subscription result = apiInstance.UpdateSubscription(scope, code, updateSubscription);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

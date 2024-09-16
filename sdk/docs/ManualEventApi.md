@@ -42,11 +42,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ManualEventApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ManualEventApi>();
             var manualEventRequest = new ManualEventRequest(); // ManualEventRequest | The data required to trigger a manual event.
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ManualEvent result = apiInstance.TriggerManualEvent(manualEventRequest, opts: opts);
+
                 // [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
                 ManualEvent result = apiInstance.TriggerManualEvent(manualEventRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
