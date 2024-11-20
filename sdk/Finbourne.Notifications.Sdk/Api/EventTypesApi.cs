@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Notifications.Sdk.Client;
+using IApiAccessor = Finbourne.Notifications.Sdk.Client.IApiAccessor;
 using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 using Finbourne.Notifications.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of EventTypeSchema</returns>
-        ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
         /// </summary>
@@ -72,7 +72,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfEventTypeSchema</returns>
-        ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema> ListEventTypesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -108,7 +108,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (EventTypeSchema)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
         /// </summary>
@@ -133,7 +133,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfEventTypeSchema)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfEventTypeSchema>> ListEventTypesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 

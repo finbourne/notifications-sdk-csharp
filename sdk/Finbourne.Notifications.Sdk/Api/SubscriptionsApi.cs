@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Notifications.Sdk.Client;
+using IApiAccessor = Finbourne.Notifications.Sdk.Client.IApiAccessor;
 using Finbourne.Notifications.Sdk.Extensions;
 using Finbourne.Notifications.Sdk.Client.Auth;
 using Finbourne.Notifications.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> CreateSubscriptionWithHttpInfo(CreateSubscription createSubscription, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription> CreateSubscriptionWithHttpInfo(CreateSubscription createSubscription, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteSubscription: Delete a subscription.
         /// </summary>
@@ -76,7 +76,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSubscriptionWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<Object> DeleteSubscriptionWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSubscription: Get a subscription.
         /// </summary>
@@ -100,7 +100,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> GetSubscriptionWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription> GetSubscriptionWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListSubscriptions: List subscriptions.
         /// </summary>
@@ -128,7 +128,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfSubscription</returns>
-        ApiResponse<ResourceListOfSubscription> ListSubscriptionsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), string? page = default(string?), int? limit = default(int?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfSubscription> ListSubscriptionsWithHttpInfo(string? filter = default(string?), string? sortBy = default(string?), string? page = default(string?), int? limit = default(int?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
         /// </summary>
@@ -154,7 +154,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Subscription</returns>
-        ApiResponse<Subscription> UpdateSubscriptionWithHttpInfo(string scope, string code, UpdateSubscription updateSubscription, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription> UpdateSubscriptionWithHttpInfo(string scope, string code, UpdateSubscription updateSubscription, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -190,7 +190,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> CreateSubscriptionWithHttpInfoAsync(CreateSubscription createSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription>> CreateSubscriptionWithHttpInfoAsync(CreateSubscription createSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteSubscription: Delete a subscription.
         /// </summary>
@@ -219,7 +219,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Object>> DeleteSubscriptionWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSubscription: Get a subscription.
         /// </summary>
@@ -248,7 +248,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> GetSubscriptionWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription>> GetSubscriptionWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListSubscriptions: List subscriptions.
         /// </summary>
@@ -281,7 +281,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfSubscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfSubscription>> ListSubscriptionsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), string? page = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfSubscription>> ListSubscriptionsWithHttpInfoAsync(string? filter = default(string?), string? sortBy = default(string?), string? page = default(string?), int? limit = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
         /// </summary>
@@ -312,7 +312,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Subscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Subscription>> UpdateSubscriptionWithHttpInfoAsync(string scope, string code, UpdateSubscription updateSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Subscription>> UpdateSubscriptionWithHttpInfoAsync(string scope, string code, UpdateSubscription updateSubscription, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
