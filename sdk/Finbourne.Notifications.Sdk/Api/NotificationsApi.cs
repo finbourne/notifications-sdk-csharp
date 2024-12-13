@@ -32,7 +32,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+        /// CreateNotification: Add a Notification to a Subscription.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -44,7 +44,7 @@ namespace Finbourne.Notifications.Sdk.Api
         Notification CreateNotification(string scope, string code, CreateNotificationRequest createNotificationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+        /// CreateNotification: Add a Notification to a Subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>ApiResponse of Notification</returns>
         Finbourne.Notifications.Sdk.Client.ApiResponse<Notification> CreateNotificationWithHttpInfo(string scope, string code, CreateNotificationRequest createNotificationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+        /// DeleteNotification: Delete a notification for a given subscription.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -70,7 +70,7 @@ namespace Finbourne.Notifications.Sdk.Api
         void DeleteNotification(string scope, string code, string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+        /// DeleteNotification: Delete a notification for a given subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -84,7 +84,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         Finbourne.Notifications.Sdk.Client.ApiResponse<Object> DeleteNotificationWithHttpInfo(string scope, string code, string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+        /// GetNotification: Get a notification on a subscription.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -96,7 +96,7 @@ namespace Finbourne.Notifications.Sdk.Api
         Notification GetNotification(string scope, string code, string id, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+        /// GetNotification: Get a notification on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -110,7 +110,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>ApiResponse of Notification</returns>
         Finbourne.Notifications.Sdk.Client.ApiResponse<Notification> GetNotificationWithHttpInfo(string scope, string code, string id, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+        /// ListNotifications: List all notifications on a subscription.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -121,7 +121,7 @@ namespace Finbourne.Notifications.Sdk.Api
         ResourceListOfNotification ListNotifications(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+        /// ListNotifications: List all notifications on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -134,7 +134,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfNotification</returns>
         Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfNotification> ListNotificationsWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+        /// UpdateNotification: Update a Notification for a Subscription
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -147,7 +147,7 @@ namespace Finbourne.Notifications.Sdk.Api
         Notification UpdateNotification(string scope, string code, string id, UpdateNotificationRequest updateNotificationRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+        /// UpdateNotification: Update a Notification for a Subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -171,7 +171,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+        /// CreateNotification: Add a Notification to a Subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -187,7 +187,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<Notification> CreateNotificationAsync(string scope, string code, CreateNotificationRequest createNotificationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+        /// CreateNotification: Add a Notification to a Subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -202,7 +202,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>Task of ApiResponse (Notification)</returns>
         System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Notification>> CreateNotificationWithHttpInfoAsync(string scope, string code, CreateNotificationRequest createNotificationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+        /// DeleteNotification: Delete a notification for a given subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -218,7 +218,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task DeleteNotificationAsync(string scope, string code, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+        /// DeleteNotification: Delete a notification for a given subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -233,7 +233,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Object>> DeleteNotificationWithHttpInfoAsync(string scope, string code, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+        /// GetNotification: Get a notification on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -249,7 +249,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<Notification> GetNotificationAsync(string scope, string code, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+        /// GetNotification: Get a notification on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -264,7 +264,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>Task of ApiResponse (Notification)</returns>
         System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<Notification>> GetNotificationWithHttpInfoAsync(string scope, string code, string id, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+        /// ListNotifications: List all notifications on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -279,7 +279,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfNotification> ListNotificationsAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+        /// ListNotifications: List all notifications on a subscription.
         /// </summary>
         /// <remarks>
         /// 
@@ -293,7 +293,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfNotification)</returns>
         System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<ResourceListOfNotification>> ListNotificationsWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+        /// UpdateNotification: Update a Notification for a Subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -310,7 +310,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<Notification> UpdateNotificationAsync(string scope, string code, string id, UpdateNotificationRequest updateNotificationRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+        /// UpdateNotification: Update a Notification for a Subscription
         /// </summary>
         /// <remarks>
         /// 
@@ -449,7 +449,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription. 
+        /// CreateNotification: Add a Notification to a Subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -465,7 +465,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription. 
+        /// CreateNotification: Add a Notification to a Subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -569,7 +569,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription. 
+        /// CreateNotification: Add a Notification to a Subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -586,7 +586,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription. 
+        /// CreateNotification: Add a Notification to a Subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -693,7 +693,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription. 
+        /// DeleteNotification: Delete a notification for a given subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -708,7 +708,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription. 
+        /// DeleteNotification: Delete a notification for a given subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -808,7 +808,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription. 
+        /// DeleteNotification: Delete a notification for a given subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -824,7 +824,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription. 
+        /// DeleteNotification: Delete a notification for a given subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -927,7 +927,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription. 
+        /// GetNotification: Get a notification on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -943,7 +943,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription. 
+        /// GetNotification: Get a notification on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1043,7 +1043,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription. 
+        /// GetNotification: Get a notification on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1060,7 +1060,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetNotification: Get a notification on a subscription. 
+        /// GetNotification: Get a notification on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1163,7 +1163,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription. 
+        /// ListNotifications: List all notifications on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1178,7 +1178,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription. 
+        /// ListNotifications: List all notifications on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1270,7 +1270,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription. 
+        /// ListNotifications: List all notifications on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1286,7 +1286,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListNotifications: List all notifications on a subscription. 
+        /// ListNotifications: List all notifications on a subscription. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1381,7 +1381,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription 
+        /// UpdateNotification: Update a Notification for a Subscription 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1398,7 +1398,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription 
+        /// UpdateNotification: Update a Notification for a Subscription 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1510,7 +1510,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription 
+        /// UpdateNotification: Update a Notification for a Subscription 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>
@@ -1528,7 +1528,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription 
+        /// UpdateNotification: Update a Notification for a Subscription 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope that identifies a subscription</param>

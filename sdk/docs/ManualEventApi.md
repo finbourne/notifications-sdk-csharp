@@ -4,13 +4,13 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**TriggerManualEvent**](ManualEventApi.md#triggermanualevent) | **POST** /api/manualevent | [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event. |
+| [**TriggerManualEvent**](ManualEventApi.md#triggermanualevent) | **POST** /api/manualevent | TriggerManualEvent: Trigger a manual event. |
 
 <a id="triggermanualevent"></a>
 # **TriggerManualEvent**
 > ManualEvent TriggerManualEvent (ManualEventRequest manualEventRequest)
 
-[EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+TriggerManualEvent: Trigger a manual event.
 
 ### Example
 ```csharp
@@ -58,7 +58,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ManualEvent result = apiInstance.TriggerManualEvent(manualEventRequest, opts: opts);
 
-                // [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+                // TriggerManualEvent: Trigger a manual event.
                 ManualEvent result = apiInstance.TriggerManualEvent(manualEventRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -79,7 +79,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+    // TriggerManualEvent: Trigger a manual event.
     ApiResponse<ManualEvent> response = apiInstance.TriggerManualEventWithHttpInfo(manualEventRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

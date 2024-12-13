@@ -32,7 +32,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+        /// GetEventType: Gets the specified event type schema.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
@@ -42,7 +42,7 @@ namespace Finbourne.Notifications.Sdk.Api
         EventTypeSchema GetEventType(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+        /// GetEventType: Gets the specified event type schema.
         /// </summary>
         /// <remarks>
         /// 
@@ -54,7 +54,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>ApiResponse of EventTypeSchema</returns>
         Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema> GetEventTypeWithHttpInfo(string eventType, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+        /// ListEventTypes: Lists all of the available event types.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -63,7 +63,7 @@ namespace Finbourne.Notifications.Sdk.Api
         ResourceListOfEventTypeSchema ListEventTypes(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+        /// ListEventTypes: Lists all of the available event types.
         /// </summary>
         /// <remarks>
         /// 
@@ -83,7 +83,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+        /// GetEventType: Gets the specified event type schema.
         /// </summary>
         /// <remarks>
         /// 
@@ -97,7 +97,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<EventTypeSchema> GetEventTypeAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+        /// GetEventType: Gets the specified event type schema.
         /// </summary>
         /// <remarks>
         /// 
@@ -110,7 +110,7 @@ namespace Finbourne.Notifications.Sdk.Api
         /// <returns>Task of ApiResponse (EventTypeSchema)</returns>
         System.Threading.Tasks.Task<Finbourne.Notifications.Sdk.Client.ApiResponse<EventTypeSchema>> GetEventTypeWithHttpInfoAsync(string eventType, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+        /// ListEventTypes: Lists all of the available event types.
         /// </summary>
         /// <remarks>
         /// 
@@ -123,7 +123,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfEventTypeSchema> ListEventTypesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+        /// ListEventTypes: Lists all of the available event types.
         /// </summary>
         /// <remarks>
         /// 
@@ -258,7 +258,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema. 
+        /// GetEventType: Gets the specified event type schema. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
@@ -272,7 +272,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema. 
+        /// GetEventType: Gets the specified event type schema. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
@@ -356,7 +356,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema. 
+        /// GetEventType: Gets the specified event type schema. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
@@ -371,7 +371,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetEventType: Gets the specified event type schema. 
+        /// GetEventType: Gets the specified event type schema. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="eventType">The event type to retrieve schema for.</param>
@@ -458,7 +458,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types. 
+        /// ListEventTypes: Lists all of the available event types. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -471,7 +471,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types. 
+        /// ListEventTypes: Lists all of the available event types. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -547,7 +547,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types. 
+        /// ListEventTypes: Lists all of the available event types. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -561,7 +561,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListEventTypes: Lists all of the available event types. 
+        /// ListEventTypes: Lists all of the available event types. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

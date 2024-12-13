@@ -4,17 +4,17 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateSubscription**](SubscriptionsApi.md#createsubscription) | **POST** /api/subscriptions | [EXPERIMENTAL] CreateSubscription: Create a new subscription. |
-| [**DeleteSubscription**](SubscriptionsApi.md#deletesubscription) | **DELETE** /api/subscriptions/{scope}/{code} | [EXPERIMENTAL] DeleteSubscription: Delete a subscription. |
-| [**GetSubscription**](SubscriptionsApi.md#getsubscription) | **GET** /api/subscriptions/{scope}/{code} | [EXPERIMENTAL] GetSubscription: Get a subscription. |
-| [**ListSubscriptions**](SubscriptionsApi.md#listsubscriptions) | **GET** /api/subscriptions | [EXPERIMENTAL] ListSubscriptions: List subscriptions. |
-| [**UpdateSubscription**](SubscriptionsApi.md#updatesubscription) | **PUT** /api/subscriptions/{scope}/{code} | [EXPERIMENTAL] UpdateSubscription: Update an existing subscription. |
+| [**CreateSubscription**](SubscriptionsApi.md#createsubscription) | **POST** /api/subscriptions | CreateSubscription: Create a new subscription. |
+| [**DeleteSubscription**](SubscriptionsApi.md#deletesubscription) | **DELETE** /api/subscriptions/{scope}/{code} | DeleteSubscription: Delete a subscription. |
+| [**GetSubscription**](SubscriptionsApi.md#getsubscription) | **GET** /api/subscriptions/{scope}/{code} | GetSubscription: Get a subscription. |
+| [**ListSubscriptions**](SubscriptionsApi.md#listsubscriptions) | **GET** /api/subscriptions | ListSubscriptions: List subscriptions. |
+| [**UpdateSubscription**](SubscriptionsApi.md#updatesubscription) | **PUT** /api/subscriptions/{scope}/{code} | UpdateSubscription: Update an existing subscription. |
 
 <a id="createsubscription"></a>
 # **CreateSubscription**
 > Subscription CreateSubscription (CreateSubscription createSubscription)
 
-[EXPERIMENTAL] CreateSubscription: Create a new subscription.
+CreateSubscription: Create a new subscription.
 
 ### Example
 ```csharp
@@ -62,7 +62,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Subscription result = apiInstance.CreateSubscription(createSubscription, opts: opts);
 
-                // [EXPERIMENTAL] CreateSubscription: Create a new subscription.
+                // CreateSubscription: Create a new subscription.
                 Subscription result = apiInstance.CreateSubscription(createSubscription);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -83,7 +83,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] CreateSubscription: Create a new subscription.
+    // CreateSubscription: Create a new subscription.
     ApiResponse<Subscription> response = apiInstance.CreateSubscriptionWithHttpInfo(createSubscription);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -126,7 +126,7 @@ catch (ApiException e)
 # **DeleteSubscription**
 > void DeleteSubscription (string scope, string code)
 
-[EXPERIMENTAL] DeleteSubscription: Delete a subscription.
+DeleteSubscription: Delete a subscription.
 
 ### Example
 ```csharp
@@ -175,7 +175,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // apiInstance.DeleteSubscription(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] DeleteSubscription: Delete a subscription.
+                // DeleteSubscription: Delete a subscription.
                 apiInstance.DeleteSubscription(scope, code);
             }
             catch (ApiException e)
@@ -195,7 +195,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteSubscription: Delete a subscription.
+    // DeleteSubscription: Delete a subscription.
     apiInstance.DeleteSubscriptionWithHttpInfo(scope, code);
 }
 catch (ApiException e)
@@ -237,7 +237,7 @@ void (empty response body)
 # **GetSubscription**
 > Subscription GetSubscription (string scope, string code)
 
-[EXPERIMENTAL] GetSubscription: Get a subscription.
+GetSubscription: Get a subscription.
 
 ### Example
 ```csharp
@@ -286,7 +286,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Subscription result = apiInstance.GetSubscription(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] GetSubscription: Get a subscription.
+                // GetSubscription: Get a subscription.
                 Subscription result = apiInstance.GetSubscription(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -307,7 +307,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetSubscription: Get a subscription.
+    // GetSubscription: Get a subscription.
     ApiResponse<Subscription> response = apiInstance.GetSubscriptionWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -352,7 +352,7 @@ catch (ApiException e)
 # **ListSubscriptions**
 > ResourceListOfSubscription ListSubscriptions (string? filter = null, string? sortBy = null, string? page = null, int? limit = null)
 
-[EXPERIMENTAL] ListSubscriptions: List subscriptions.
+ListSubscriptions: List subscriptions.
 
 ### Example
 ```csharp
@@ -403,7 +403,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfSubscription result = apiInstance.ListSubscriptions(filter, sortBy, page, limit, opts: opts);
 
-                // [EXPERIMENTAL] ListSubscriptions: List subscriptions.
+                // ListSubscriptions: List subscriptions.
                 ResourceListOfSubscription result = apiInstance.ListSubscriptions(filter, sortBy, page, limit);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -424,7 +424,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListSubscriptions: List subscriptions.
+    // ListSubscriptions: List subscriptions.
     ApiResponse<ResourceListOfSubscription> response = apiInstance.ListSubscriptionsWithHttpInfo(filter, sortBy, page, limit);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -470,7 +470,7 @@ catch (ApiException e)
 # **UpdateSubscription**
 > Subscription UpdateSubscription (string scope, string code, UpdateSubscription updateSubscription)
 
-[EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
+UpdateSubscription: Update an existing subscription.
 
 ### Example
 ```csharp
@@ -520,7 +520,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Subscription result = apiInstance.UpdateSubscription(scope, code, updateSubscription, opts: opts);
 
-                // [EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
+                // UpdateSubscription: Update an existing subscription.
                 Subscription result = apiInstance.UpdateSubscription(scope, code, updateSubscription);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -541,7 +541,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateSubscription: Update an existing subscription.
+    // UpdateSubscription: Update an existing subscription.
     ApiResponse<Subscription> response = apiInstance.UpdateSubscriptionWithHttpInfo(scope, code, updateSubscription);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

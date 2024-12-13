@@ -32,7 +32,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries
+        /// ListDeliveries: List Deliveries
         /// </summary>
         /// <remarks>
         /// Currently only returns deliveries with failed attempts.
@@ -47,7 +47,7 @@ namespace Finbourne.Notifications.Sdk.Api
         ResourceListOfDelivery ListDeliveries(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries
+        /// ListDeliveries: List Deliveries
         /// </summary>
         /// <remarks>
         /// Currently only returns deliveries with failed attempts.
@@ -70,7 +70,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries
+        /// ListDeliveries: List Deliveries
         /// </summary>
         /// <remarks>
         /// Currently only returns deliveries with failed attempts.
@@ -86,7 +86,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfDelivery> ListDeliveriesAsync(string? page = default(string?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries
+        /// ListDeliveries: List Deliveries
         /// </summary>
         /// <remarks>
         /// Currently only returns deliveries with failed attempts.
@@ -224,7 +224,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
+        /// ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing delivery attempts. This value is returned from the previous call. When this field is supplied the filter field should not be supplied. (optional)</param>
@@ -240,7 +240,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
+        /// ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing delivery attempts. This value is returned from the previous call. When this field is supplied the filter field should not be supplied. (optional)</param>
@@ -331,7 +331,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
+        /// ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing delivery attempts. This value is returned from the previous call. When this field is supplied the filter field should not be supplied. (optional)</param>
@@ -348,7 +348,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
+        /// ListDeliveries: List Deliveries Currently only returns deliveries with failed attempts.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing delivery attempts. This value is returned from the previous call. When this field is supplied the filter field should not be supplied. (optional)</param>

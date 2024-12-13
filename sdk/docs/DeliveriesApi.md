@@ -4,13 +4,13 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListDeliveries**](DeliveriesApi.md#listdeliveries) | **GET** /api/deliveries | [EXPERIMENTAL] ListDeliveries: List Deliveries |
+| [**ListDeliveries**](DeliveriesApi.md#listdeliveries) | **GET** /api/deliveries | ListDeliveries: List Deliveries |
 
 <a id="listdeliveries"></a>
 # **ListDeliveries**
 > ResourceListOfDelivery ListDeliveries (string? page = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] ListDeliveries: List Deliveries
+ListDeliveries: List Deliveries
 
 Currently only returns deliveries with failed attempts.
 
@@ -62,7 +62,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfDelivery result = apiInstance.ListDeliveries(page, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] ListDeliveries: List Deliveries
+                // ListDeliveries: List Deliveries
                 ResourceListOfDelivery result = apiInstance.ListDeliveries(page, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -83,7 +83,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListDeliveries: List Deliveries
+    // ListDeliveries: List Deliveries
     ApiResponse<ResourceListOfDelivery> response = apiInstance.ListDeliveriesWithHttpInfo(page, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

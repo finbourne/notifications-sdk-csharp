@@ -4,17 +4,17 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateNotification**](NotificationsApi.md#createnotification) | **POST** /api/subscriptions/{scope}/{code}/notifications | [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription. |
-| [**DeleteNotification**](NotificationsApi.md#deletenotification) | **DELETE** /api/subscriptions/{scope}/{code}/notifications/{id} | [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription. |
-| [**GetNotification**](NotificationsApi.md#getnotification) | **GET** /api/subscriptions/{scope}/{code}/notifications/{id} | [EXPERIMENTAL] GetNotification: Get a notification on a subscription. |
-| [**ListNotifications**](NotificationsApi.md#listnotifications) | **GET** /api/subscriptions/{scope}/{code}/notifications | [EXPERIMENTAL] ListNotifications: List all notifications on a subscription. |
-| [**UpdateNotification**](NotificationsApi.md#updatenotification) | **PUT** /api/subscriptions/{scope}/{code}/notifications/{id} | [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription |
+| [**CreateNotification**](NotificationsApi.md#createnotification) | **POST** /api/subscriptions/{scope}/{code}/notifications | CreateNotification: Add a Notification to a Subscription. |
+| [**DeleteNotification**](NotificationsApi.md#deletenotification) | **DELETE** /api/subscriptions/{scope}/{code}/notifications/{id} | DeleteNotification: Delete a notification for a given subscription. |
+| [**GetNotification**](NotificationsApi.md#getnotification) | **GET** /api/subscriptions/{scope}/{code}/notifications/{id} | GetNotification: Get a notification on a subscription. |
+| [**ListNotifications**](NotificationsApi.md#listnotifications) | **GET** /api/subscriptions/{scope}/{code}/notifications | ListNotifications: List all notifications on a subscription. |
+| [**UpdateNotification**](NotificationsApi.md#updatenotification) | **PUT** /api/subscriptions/{scope}/{code}/notifications/{id} | UpdateNotification: Update a Notification for a Subscription |
 
 <a id="createnotification"></a>
 # **CreateNotification**
 > Notification CreateNotification (string scope, string code, CreateNotificationRequest createNotificationRequest)
 
-[EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+CreateNotification: Add a Notification to a Subscription.
 
 ### Example
 ```csharp
@@ -64,7 +64,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Notification result = apiInstance.CreateNotification(scope, code, createNotificationRequest, opts: opts);
 
-                // [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+                // CreateNotification: Add a Notification to a Subscription.
                 Notification result = apiInstance.CreateNotification(scope, code, createNotificationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -85,7 +85,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] CreateNotification: Add a Notification to a Subscription.
+    // CreateNotification: Add a Notification to a Subscription.
     ApiResponse<Notification> response = apiInstance.CreateNotificationWithHttpInfo(scope, code, createNotificationRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -130,7 +130,7 @@ catch (ApiException e)
 # **DeleteNotification**
 > void DeleteNotification (string scope, string code, string id)
 
-[EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+DeleteNotification: Delete a notification for a given subscription.
 
 ### Example
 ```csharp
@@ -180,7 +180,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // apiInstance.DeleteNotification(scope, code, id, opts: opts);
 
-                // [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+                // DeleteNotification: Delete a notification for a given subscription.
                 apiInstance.DeleteNotification(scope, code, id);
             }
             catch (ApiException e)
@@ -200,7 +200,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteNotification: Delete a notification for a given subscription.
+    // DeleteNotification: Delete a notification for a given subscription.
     apiInstance.DeleteNotificationWithHttpInfo(scope, code, id);
 }
 catch (ApiException e)
@@ -243,7 +243,7 @@ void (empty response body)
 # **GetNotification**
 > Notification GetNotification (string scope, string code, string id)
 
-[EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+GetNotification: Get a notification on a subscription.
 
 ### Example
 ```csharp
@@ -293,7 +293,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Notification result = apiInstance.GetNotification(scope, code, id, opts: opts);
 
-                // [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+                // GetNotification: Get a notification on a subscription.
                 Notification result = apiInstance.GetNotification(scope, code, id);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -314,7 +314,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetNotification: Get a notification on a subscription.
+    // GetNotification: Get a notification on a subscription.
     ApiResponse<Notification> response = apiInstance.GetNotificationWithHttpInfo(scope, code, id);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -360,7 +360,7 @@ catch (ApiException e)
 # **ListNotifications**
 > ResourceListOfNotification ListNotifications (string scope, string code)
 
-[EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+ListNotifications: List all notifications on a subscription.
 
 ### Example
 ```csharp
@@ -409,7 +409,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfNotification result = apiInstance.ListNotifications(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+                // ListNotifications: List all notifications on a subscription.
                 ResourceListOfNotification result = apiInstance.ListNotifications(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -430,7 +430,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListNotifications: List all notifications on a subscription.
+    // ListNotifications: List all notifications on a subscription.
     ApiResponse<ResourceListOfNotification> response = apiInstance.ListNotificationsWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -475,7 +475,7 @@ catch (ApiException e)
 # **UpdateNotification**
 > Notification UpdateNotification (string scope, string code, string id, UpdateNotificationRequest updateNotificationRequest)
 
-[EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+UpdateNotification: Update a Notification for a Subscription
 
 ### Example
 ```csharp
@@ -526,7 +526,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Notification result = apiInstance.UpdateNotification(scope, code, id, updateNotificationRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+                // UpdateNotification: Update a Notification for a Subscription
                 Notification result = apiInstance.UpdateNotification(scope, code, id, updateNotificationRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -547,7 +547,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateNotification: Update a Notification for a Subscription
+    // UpdateNotification: Update a Notification for a Subscription
     ApiResponse<Notification> response = apiInstance.UpdateNotificationWithHttpInfo(scope, code, id, updateNotificationRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

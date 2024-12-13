@@ -4,14 +4,14 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**GetEventType**](EventTypesApi.md#geteventtype) | **GET** /api/eventtypes/{eventType} | [EXPERIMENTAL] GetEventType: Gets the specified event type schema. |
-| [**ListEventTypes**](EventTypesApi.md#listeventtypes) | **GET** /api/eventtypes | [EXPERIMENTAL] ListEventTypes: Lists all of the available event types. |
+| [**GetEventType**](EventTypesApi.md#geteventtype) | **GET** /api/eventtypes/{eventType} | GetEventType: Gets the specified event type schema. |
+| [**ListEventTypes**](EventTypesApi.md#listeventtypes) | **GET** /api/eventtypes | ListEventTypes: Lists all of the available event types. |
 
 <a id="geteventtype"></a>
 # **GetEventType**
 > EventTypeSchema GetEventType (string eventType)
 
-[EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+GetEventType: Gets the specified event type schema.
 
 ### Example
 ```csharp
@@ -59,7 +59,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // EventTypeSchema result = apiInstance.GetEventType(eventType, opts: opts);
 
-                // [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+                // GetEventType: Gets the specified event type schema.
                 EventTypeSchema result = apiInstance.GetEventType(eventType);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -80,7 +80,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetEventType: Gets the specified event type schema.
+    // GetEventType: Gets the specified event type schema.
     ApiResponse<EventTypeSchema> response = apiInstance.GetEventTypeWithHttpInfo(eventType);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -124,7 +124,7 @@ catch (ApiException e)
 # **ListEventTypes**
 > ResourceListOfEventTypeSchema ListEventTypes ()
 
-[EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+ListEventTypes: Lists all of the available event types.
 
 ### Example
 ```csharp
@@ -171,7 +171,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfEventTypeSchema result = apiInstance.ListEventTypes(opts: opts);
 
-                // [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+                // ListEventTypes: Lists all of the available event types.
                 ResourceListOfEventTypeSchema result = apiInstance.ListEventTypes();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -192,7 +192,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListEventTypes: Lists all of the available event types.
+    // ListEventTypes: Lists all of the available event types.
     ApiResponse<ResourceListOfEventTypeSchema> response = apiInstance.ListEventTypesWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

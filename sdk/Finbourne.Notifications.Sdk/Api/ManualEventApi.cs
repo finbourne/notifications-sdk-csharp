@@ -32,7 +32,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+        /// TriggerManualEvent: Trigger a manual event.
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
@@ -42,7 +42,7 @@ namespace Finbourne.Notifications.Sdk.Api
         ManualEvent TriggerManualEvent(ManualEventRequest manualEventRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+        /// TriggerManualEvent: Trigger a manual event.
         /// </summary>
         /// <remarks>
         /// 
@@ -63,7 +63,7 @@ namespace Finbourne.Notifications.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+        /// TriggerManualEvent: Trigger a manual event.
         /// </summary>
         /// <remarks>
         /// 
@@ -77,7 +77,7 @@ namespace Finbourne.Notifications.Sdk.Api
         System.Threading.Tasks.Task<ManualEvent> TriggerManualEventAsync(ManualEventRequest manualEventRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event.
+        /// TriggerManualEvent: Trigger a manual event.
         /// </summary>
         /// <remarks>
         /// 
@@ -213,7 +213,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event. 
+        /// TriggerManualEvent: Trigger a manual event. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
@@ -227,7 +227,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event. 
+        /// TriggerManualEvent: Trigger a manual event. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
@@ -315,7 +315,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event. 
+        /// TriggerManualEvent: Trigger a manual event. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
@@ -330,7 +330,7 @@ namespace Finbourne.Notifications.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] TriggerManualEvent: Trigger a manual event. 
+        /// TriggerManualEvent: Trigger a manual event. 
         /// </summary>
         /// <exception cref="Finbourne.Notifications.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="manualEventRequest">The data required to trigger a manual event.</param>
