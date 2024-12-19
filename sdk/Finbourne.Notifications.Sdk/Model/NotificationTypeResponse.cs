@@ -28,7 +28,7 @@ namespace Finbourne.Notifications.Sdk.Model
     /// </summary>
     [JsonConverter(typeof(NotificationTypeResponseJsonConverter))]
     [DataContract(Name = "NotificationTypeResponse")]
-    public partial class NotificationTypeResponse : AbstractOpenAPISchema, IEquatable<NotificationTypeResponse>, IValidatableObject
+    public partial class NotificationTypeResponse : AbstractOpenAPISchema, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationTypeResponse" /> class
@@ -116,27 +116,27 @@ namespace Finbourne.Notifications.Sdk.Model
             }
             set
             {
-                if (value.GetType() == typeof(AmazonSqsNotificationTypeResponse))
+                if (value.GetType() == typeof(AmazonSqsNotificationTypeResponse) || value is AmazonSqsNotificationTypeResponse)
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AmazonSqsPrincipalAuthNotificationTypeResponse))
+                else if (value.GetType() == typeof(AmazonSqsPrincipalAuthNotificationTypeResponse) || value is AmazonSqsPrincipalAuthNotificationTypeResponse)
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(AzureServiceBusTypeResponse))
+                else if (value.GetType() == typeof(AzureServiceBusTypeResponse) || value is AzureServiceBusTypeResponse)
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(EmailNotificationTypeResponse))
+                else if (value.GetType() == typeof(EmailNotificationTypeResponse) || value is EmailNotificationTypeResponse)
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(SmsNotificationTypeResponse))
+                else if (value.GetType() == typeof(SmsNotificationTypeResponse) || value is SmsNotificationTypeResponse)
                 {
                     this._actualInstance = value;
                 }
-                else if (value.GetType() == typeof(WebhookNotificationTypeResponse))
+                else if (value.GetType() == typeof(WebhookNotificationTypeResponse) || value is WebhookNotificationTypeResponse)
                 {
                     this._actualInstance = value;
                 }
@@ -371,50 +371,13 @@ namespace Finbourne.Notifications.Sdk.Model
             }
             else if (match > 1)
             {
-                throw new InvalidDataException("The JSON string `" + jsonString + "` incorrectly matches more than one schema (should be exactly one match): " + matchedTypes);
+                throw new InvalidDataException("The JSON string `" + jsonString + "` incorrectly matches more than one schema (should be exactly one match): " + String.Join(",", matchedTypes));
             }
 
             // deserialization is considered successful at this point if no exception has been thrown.
             return newNotificationTypeResponse;
         }
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NotificationTypeResponse);
-        }
-
-        /// <summary>
-        /// Returns true if NotificationTypeResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NotificationTypeResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NotificationTypeResponse input)
-        {
-            if (input == null)
-                return false;
-
-            return this.ActualInstance.Equals(input.ActualInstance);
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ActualInstance != null)
-                    hashCode = hashCode * 59 + this.ActualInstance.GetHashCode();
-                return hashCode;
-            }
-        }
 
         /// <summary>
         /// To validate all properties of the instance
@@ -453,11 +416,15 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <returns>The object converted from the JSON string</returns>
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if(reader.TokenType != JsonToken.Null)
+            switch(reader.TokenType) 
             {
-                return NotificationTypeResponse.FromJson(JObject.Load(reader).ToString(Formatting.None));
+                case JsonToken.StartObject:
+                    return NotificationTypeResponse.FromJson(JObject.Load(reader).ToString(Formatting.None));
+                case JsonToken.StartArray:
+                    return NotificationTypeResponse.FromJson(JArray.Load(reader).ToString(Formatting.None));
+                default:
+                    return null;
             }
-            return null;
         }
 
         /// <summary>

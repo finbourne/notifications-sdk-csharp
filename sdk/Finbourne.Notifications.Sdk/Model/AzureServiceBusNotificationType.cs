@@ -40,7 +40,6 @@ namespace Finbourne.Notifications.Sdk.Model
             /// </summary>
             [EnumMember(Value = "AzureServiceBus")]
             AzureServiceBus = 1
-
         }
 
 
@@ -59,21 +58,21 @@ namespace Finbourne.Notifications.Sdk.Model
         /// Initializes a new instance of the <see cref="AzureServiceBusNotificationType" /> class.
         /// </summary>
         /// <param name="type">The type of delivery mechanism for this notification (required).</param>
-        /// <param name="_namespace">Reference to namespace from Configuration Store (required).</param>
+        /// <param name="varNamespace">Reference to namespace from Configuration Store (required).</param>
         /// <param name="queueName">Reference to queue name from Configuration Store (required).</param>
         /// <param name="body">The body of the Azure Service Bus Message (required).</param>
         /// <param name="tenantId">Reference to tenant id from Configuration Store (required).</param>
         /// <param name="clientId">Reference to client id from Configuration Store (required).</param>
         /// <param name="clientSecret">Reference to client secret from Configuration Store (required).</param>
-        public AzureServiceBusNotificationType(TypeEnum type = default(TypeEnum), string _namespace = default(string), string queueName = default(string), string body = default(string), string tenantId = default(string), string clientId = default(string), string clientSecret = default(string))
+        public AzureServiceBusNotificationType(TypeEnum type = default(TypeEnum), string varNamespace = default(string), string queueName = default(string), string body = default(string), string tenantId = default(string), string clientId = default(string), string clientSecret = default(string))
         {
             this.Type = type;
-            // to ensure "_namespace" is required (not null)
-            if (_namespace == null)
+            // to ensure "varNamespace" is required (not null)
+            if (varNamespace == null)
             {
-                throw new ArgumentNullException("_namespace is a required property for AzureServiceBusNotificationType and cannot be null");
+                throw new ArgumentNullException("varNamespace is a required property for AzureServiceBusNotificationType and cannot be null");
             }
-            this.Namespace = _namespace;
+            this.Namespace = varNamespace;
             // to ensure "queueName" is required (not null)
             if (queueName == null)
             {

@@ -40,7 +40,6 @@ namespace Finbourne.Notifications.Sdk.Model
             /// </summary>
             [EnumMember(Value = "AmazonSqs")]
             AmazonSqs = 1
-
         }
 
 

@@ -40,7 +40,6 @@ namespace Finbourne.Notifications.Sdk.Model
             /// </summary>
             [EnumMember(Value = "AmazonSqsPrincipalAuth")]
             AmazonSqsPrincipalAuth = 1
-
         }
 
 
