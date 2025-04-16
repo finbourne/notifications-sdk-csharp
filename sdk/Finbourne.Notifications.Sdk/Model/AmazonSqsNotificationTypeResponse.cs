@@ -57,7 +57,7 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <param name="apiSecretRef">Reference to API secret from Configuration Store.</param>
         /// <param name="body">The body of the Amazon Queue Message.</param>
         /// <param name="queueUrlRef">Reference to queue url from Configuration Store.</param>
-        public AmazonSqsNotificationTypeResponse(TypeEnum? type = default(TypeEnum?), string apiKeyRef = default(string), string apiSecretRef = default(string), string body = default(string), string queueUrlRef = default(string))
+        public AmazonSqsNotificationTypeResponse(TypeEnum ?type = default(TypeEnum?), string apiKeyRef = default(string), string apiSecretRef = default(string), string body = default(string), string queueUrlRef = default(string))
         {
             this.Type = type;
             this.ApiKeyRef = apiKeyRef;

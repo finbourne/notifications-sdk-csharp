@@ -55,7 +55,7 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <param name="type">The type of delivery mechanism for this notification.</param>
         /// <param name="body">The body of the SMS.</param>
         /// <param name="recipients">The phone numbers to which the SMS will be sent to (E.164 format).</param>
-        public SmsNotificationTypeResponse(TypeEnum? type = default(TypeEnum?), string body = default(string), List<string> recipients = default(List<string>))
+        public SmsNotificationTypeResponse(TypeEnum ?type = default(TypeEnum?), string body = default(string), List<string> recipients = default(List<string>))
         {
             this.Type = type;
             this.Body = body;

@@ -59,7 +59,7 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <param name="tenantIdRef">Reference to tenant id  from Configuration Store.</param>
         /// <param name="clientIdRef">Reference to client id from Configuration Store.</param>
         /// <param name="clientSecretRef">Reference to client secret from Configuration Store.</param>
-        public AzureServiceBusTypeResponse(TypeEnum? type = default(TypeEnum?), string namespaceRef = default(string), string queueNameRef = default(string), string body = default(string), string tenantIdRef = default(string), string clientIdRef = default(string), string clientSecretRef = default(string))
+        public AzureServiceBusTypeResponse(TypeEnum ?type = default(TypeEnum?), string namespaceRef = default(string), string queueNameRef = default(string), string body = default(string), string tenantIdRef = default(string), string clientIdRef = default(string), string clientSecretRef = default(string))
         {
             this.Type = type;
             this.NamespaceRef = namespaceRef;

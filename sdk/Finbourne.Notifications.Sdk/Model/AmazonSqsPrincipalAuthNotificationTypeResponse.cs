@@ -55,7 +55,7 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <param name="type">The type of delivery mechanism for this notification.</param>
         /// <param name="body">The body of the Amazon Queue Message.</param>
         /// <param name="queueUrlRef">Reference to queue url from Configuration Store.</param>
-        public AmazonSqsPrincipalAuthNotificationTypeResponse(TypeEnum? type = default(TypeEnum?), string body = default(string), string queueUrlRef = default(string))
+        public AmazonSqsPrincipalAuthNotificationTypeResponse(TypeEnum ?type = default(TypeEnum?), string body = default(string), string queueUrlRef = default(string))
         {
             this.Type = type;
             this.Body = body;

@@ -59,7 +59,7 @@ namespace Finbourne.Notifications.Sdk.Model
         /// <param name="emailAddressTo">&#39;To&#39; recipients of the email.</param>
         /// <param name="emailAddressCc">&#39;Cc&#39; recipients of the email.</param>
         /// <param name="emailAddressBcc">&#39;Bcc&#39; recipients of the email.</param>
-        public EmailNotificationTypeResponse(TypeEnum? type = default(TypeEnum?), string subject = default(string), string plainTextBody = default(string), string htmlBody = default(string), List<string> emailAddressTo = default(List<string>), List<string> emailAddressCc = default(List<string>), List<string> emailAddressBcc = default(List<string>))
+        public EmailNotificationTypeResponse(TypeEnum ?type = default(TypeEnum?), string subject = default(string), string plainTextBody = default(string), string htmlBody = default(string), List<string> emailAddressTo = default(List<string>), List<string> emailAddressCc = default(List<string>), List<string> emailAddressBcc = default(List<string>))
         {
             this.Type = type;
             this.Subject = subject;
