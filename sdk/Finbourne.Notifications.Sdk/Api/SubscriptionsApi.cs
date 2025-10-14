@@ -1142,18 +1142,22 @@ namespace Finbourne.Notifications.Sdk.Api
 
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Notifications.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Notifications.Sdk.Client.ClientUtils.ParameterToMultiMap("", "sortBy", sortBy));
             }
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Notifications.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Notifications.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
 

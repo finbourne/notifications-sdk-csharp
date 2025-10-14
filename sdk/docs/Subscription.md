@@ -17,5 +17,32 @@ Name | Type | Description | Notes
 **UseAsAuth** | **string** | The user to use as auth for the subscription | 
 **Href** | **string** | A URI for retrieving this subscription | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Notifications.Sdk.Model;
+using System;
 
+ResourceId id = new ResourceId();
+string displayName = "displayName";
+string description = "example description";
+string status = "status";
+MatchingPattern matchingPattern = new MatchingPattern();
+string userIdCreated = "userIdCreated";
+string userIdModified = "userIdModified";
+string useAsAuth = "useAsAuth";
+string href = "example href";
+
+Subscription subscriptionInstance = new Subscription(
+    id: id,
+    displayName: displayName,
+    description: description,
+    status: status,
+    matchingPattern: matchingPattern,
+    createdAt: createdAt,
+    userIdCreated: userIdCreated,
+    modifiedAt: modifiedAt,
+    userIdModified: userIdModified,
+    useAsAuth: useAsAuth,
+    href: href);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

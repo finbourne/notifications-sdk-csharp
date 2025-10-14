@@ -9,5 +9,16 @@ Name | Type | Description | Notes
 **AttemptTime** | **DateTimeOffset** | The time that the delivery was attempted. | 
 **Status** | [**AttemptStatus**](AttemptStatus.md) |  | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Notifications.Sdk.Model;
+using System;
 
+AttemptStatus status = new AttemptStatus();
+
+Attempt attemptInstance = new Attempt(
+    attemptNumber: attemptNumber,
+    attemptTime: attemptTime,
+    status: status);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

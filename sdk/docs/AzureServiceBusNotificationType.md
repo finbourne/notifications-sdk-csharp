@@ -13,5 +13,26 @@ Name | Type | Description | Notes
 **ClientId** | **string** | Reference to client id from Configuration Store | 
 **ClientSecret** | **string** | Reference to client secret from Configuration Store | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Notifications.Sdk.Model;
+using System;
 
+string type = "type";
+string namespace = "namespace";
+string queueName = "queueName";
+string body = "body";
+string tenantId = "tenantId";
+string clientId = "clientId";
+string clientSecret = "clientSecret";
+
+AzureServiceBusNotificationType azureServiceBusNotificationTypeInstance = new AzureServiceBusNotificationType(
+    type: type,
+    namespace: namespace,
+    queueName: queueName,
+    body: body,
+    tenantId: tenantId,
+    clientId: clientId,
+    clientSecret: clientSecret);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

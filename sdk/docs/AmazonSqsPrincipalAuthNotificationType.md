@@ -9,5 +9,18 @@ Name | Type | Description | Notes
 **Body** | **string** | The body of the Amazon Queue Message | 
 **QueueUrlRef** | **string** | Reference to queue url from Configuration Store | 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Notifications.Sdk.Model;
+using System;
 
+string type = "type";
+string body = "body";
+string queueUrlRef = "queueUrlRef";
+
+AmazonSqsPrincipalAuthNotificationType amazonSqsPrincipalAuthNotificationTypeInstance = new AmazonSqsPrincipalAuthNotificationType(
+    type: type,
+    body: body,
+    queueUrlRef: queueUrlRef);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
