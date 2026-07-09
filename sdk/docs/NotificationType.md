@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **TenantId** | **string** | Reference to tenant id from Configuration Store | 
 **ClientId** | **string** | Reference to client id from Configuration Store | 
 **ClientSecret** | **string** | Reference to client secret from Configuration Store | 
+**ApplicationProperties** | **Dictionary&lt;string, string&gt;** | Optional key-value pairs to attach to the Azure Service Bus message envelope. | [optional] 
 **Subject** | **string** | The subject of the email | 
 **PlainTextBody** | **string** | The plain text body of the email | 
 **HtmlBody** | **string** | The HTML body of the email (if any) | [optional] 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **TenantId** | **string** | Reference to tenant id from Configuration Store | 
 **ClientId** | **string** | Reference to client id from Configuration Store | 
 **ClientSecret** | **string** | Reference to client secret from Configuration Store | 
+**ApplicationProperties** | **Dictionary&lt;string, string&gt;** | Optional key-value pairs to attach to the Azure Service Bus message envelope. | [optional] 
 
 ```csharp
 using Finbourne.Notifications.Sdk.Model;
@@ -24,6 +25,7 @@ string body = "body";
 string tenantId = "tenantId";
 string clientId = "clientId";
 string clientSecret = "clientSecret";
+Dictionary<string, string> applicationProperties = new Dictionary<string, string>();
 
 AzureServiceBusNotificationType azureServiceBusNotificationTypeInstance = new AzureServiceBusNotificationType(
     type: type,
@@ -32,7 +34,8 @@ AzureServiceBusNotificationType azureServiceBusNotificationTypeInstance = new Az
     body: body,
     tenantId: tenantId,
     clientId: clientId,
-    clientSecret: clientSecret);
+    clientSecret: clientSecret,
+    applicationProperties: applicationProperties);
 ```
 
 [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
