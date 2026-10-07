@@ -6,6 +6,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/notification*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ApplicationMetadataApi* | [**ListAccessControlledResources**](docs/ApplicationMetadataApi.md#listaccesscontrolledresources) | **GET** /api/metadata/access/resources | ListAccessControlledResources: Get resources available for access control
+*ApplicationMetadataApi* | [**ListApiEndpoints**](docs/ApplicationMetadataApi.md#listapiendpoints) | **GET** /api/metadata/endpoints | ListApiEndpoints: Get the API endpoints available
 *DeliveriesApi* | [**ListDeliveries**](docs/DeliveriesApi.md#listdeliveries) | **GET** /api/deliveries | ListDeliveries: List Deliveries
 *EventTypesApi* | [**GetEventType**](docs/EventTypesApi.md#geteventtype) | **GET** /api/eventtypes/{eventType} | GetEventType: Gets the specified event type schema.
 *EventTypesApi* | [**ListEventTypes**](docs/EventTypesApi.md#listeventtypes) | **GET** /api/eventtypes | ListEventTypes: Lists all of the available event types.
@@ -32,6 +33,7 @@ Class | Method | HTTP request | Description
  - [AmazonSqsNotificationTypeResponse](docs/AmazonSqsNotificationTypeResponse.md)
  - [AmazonSqsPrincipalAuthNotificationType](docs/AmazonSqsPrincipalAuthNotificationType.md)
  - [AmazonSqsPrincipalAuthNotificationTypeResponse](docs/AmazonSqsPrincipalAuthNotificationTypeResponse.md)
+ - [ApiEndpoint](docs/ApiEndpoint.md)
  - [Attempt](docs/Attempt.md)
  - [AttemptStatus](docs/AttemptStatus.md)
  - [AzureServiceBusNotificationType](docs/AzureServiceBusNotificationType.md)
@@ -63,6 +65,7 @@ Class | Method | HTTP request | Description
  - [ResourceListOfEventTypeSchema](docs/ResourceListOfEventTypeSchema.md)
  - [ResourceListOfNotification](docs/ResourceListOfNotification.md)
  - [ResourceListOfSubscription](docs/ResourceListOfSubscription.md)
+ - [ServiceApiEndpoints](docs/ServiceApiEndpoints.md)
  - [SmsNotificationType](docs/SmsNotificationType.md)
  - [SmsNotificationTypeResponse](docs/SmsNotificationTypeResponse.md)
  - [Subscription](docs/Subscription.md)
