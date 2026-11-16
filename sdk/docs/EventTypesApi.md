@@ -73,7 +73,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetEventTypeWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -185,7 +184,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListEventTypesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

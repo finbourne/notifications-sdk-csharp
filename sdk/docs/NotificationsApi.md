@@ -78,7 +78,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateNotificationWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -193,7 +192,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeleteNotificationWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -307,7 +305,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetNotificationWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -423,7 +420,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListNotificationsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -540,7 +536,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdateNotificationWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

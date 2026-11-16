@@ -42,7 +42,6 @@ namespace Finbourne.Notifications.Sdk.Model
             Sms = 1
         }
 
-
         /// <summary>
         /// The type of delivery mechanism for this notification
         /// </summary>

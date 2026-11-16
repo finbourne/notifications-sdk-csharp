@@ -76,7 +76,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateSubscriptionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -188,7 +187,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeleteSubscriptionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -300,7 +298,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetSubscriptionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -417,7 +414,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListSubscriptionsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -534,7 +530,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdateSubscriptionWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
